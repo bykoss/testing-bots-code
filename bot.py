@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 
 # --- CONFIGURACIÓN INICIAL ---
 load_dotenv()
-TOKEN = os.getenv("DISCORD_TOKEN")
+TOKEN = os.getenv("MTAxMTQ1NDk3NzMxNjc2MTcxMA.GpnxEx.ccBWew_bbDi--I-U9k05-5AJNeO-RZsgXl4srM")
 
 # Cargar configuración desde un archivo JSON
 try:
@@ -22,8 +22,8 @@ except FileNotFoundError:
     # Crear un config.json por defecto si no existe
     config = {
         "prefix": "!",
-        "owner_id": "AQUI_TU_ID_DE_USUARIO",
-        "guild_id": "AQUI_EL_ID_DE_UN_SERVIDOR_PARA_PROBAR_COMANDOS_SLASH",
+        "owner_id": "893295635837644810",
+        "guild_id": "1478566077041741866",
         "embed_color": "2F3136",
         "error_color": "ED4245",
         "success_color": "57F287"
@@ -42,7 +42,7 @@ intents.message_content = True
 intents.reactions = True
 intents.voice_states = True
 
-bot = commands.Bot(command_prefix=config['prefix'], intents=intents, owner_ids={int(config['owner_id'])})
+bot = commands.Bot(command_prefix=config['prefix'], intents=intents, owner_ids={int(config['893295635837644810'])})
 
 # --- ALMACENAMIENTO EN MEMORIA ---
 warns = {}
