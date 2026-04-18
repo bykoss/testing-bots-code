@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 
 # --- CONFIGURACIÓN INICIAL ---
 load_dotenv()
-TOKEN = os.getenv("MTAxMTQ1NDk3NzMxNjc2MTcxMA.GpnxEx.ccBWew_bbDi--I-U9k05-5AJNeO-RZsgXl4srM")
+TOKEN = os.getenv("DISCORD_TOKEN")
 
 # Cargar configuración desde un archivo JSON
 try:
