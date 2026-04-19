@@ -1,0 +1,27 @@
+{
+  "token": "",
+  "clientId": "",
+  "guildId": "",
+  "mongoURI": "",
+  "prefix": "!",
+  "embedColor": "#5865F2",
+  "errorColor": "#ED4245",
+  "successColor": "#57F287",
+  "warnColor": "#FEE75C",
+  "ownerIds": [],
+  "logChannel": "",
+  "antiNuke": {
+    "enabled": true,
+    "maxBans": 5,
+    "maxKicks": 5,
+    "maxChannelDeletes": 3,
+    "maxRoleDeletes": 3,
+    "interval": 10000
+  },
+  "antiRaid": {
+    "enabled": true,
+    "joinThreshold": 10,
+    "joinInterval": 5000,
+    "action": "kick"
+  }
+}
