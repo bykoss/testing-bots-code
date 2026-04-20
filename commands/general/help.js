@@ -53,10 +53,11 @@ module.exports = {
     collector.on('collect', async i => {
       if (i.user.id !== interaction.user.id) return i.reply({ content: 'No puedes usar este menú.', ephemeral: true });
       const cat = i.values[0];
-      const catCommands = client.commands.filter(c => {
-        const path = require.resolve(`../${cat}/${c.data.name}.js`).replace(/\\/g, '/');
-        return path.includes(`/commands/${cat}/`);
-      });
+const { readdirSync } = require('fs');
+const { join } = require('path');
+let catFiles = [];
+try { catFiles = readdirSync(join(__dirname, '..', cat)).filter(f => f.endsWith('.js')).map(f => f.replace('.js', '')); } catch {}
+const catCommands = client.commands.filter(c => catFiles.includes(c.data.name));
 
       const catEmbed = new EmbedBuilder()
         .setColor(config.embedColor)
